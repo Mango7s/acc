@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <div class="panel-body">
+        <!--<div id="toolbar" class="btn-group">-->
+            <!--<button id="btn_add" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">-->
+            <!--<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增-->
+            <!--</button>-->
+            <!--<button id="btn_delete" type="button" class="btn btn-default" ng-click="DeleteAdminEmail()">-->
+            <!--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除-->
+            <!--</button>-->
+        <!--</div>-->
+    </div>
+    <div class="form-group">
+        <div class="clearfix">
+            <table id="table"
+               data-toggle="table"
+               data-pagination="true"
+               data-show-refresh="false"
+               data-search="false"
+               data-toolbar="#toolbar"
+               data-url="http://104.129.9.227:9999/accounts/?format=json"
+            >
+            <thead>
+            <tr>
+                <th data-field="nikename" data-formatter="">昵称</th>
+                <th data-field="acc_number" >游戏账号</th>
+                <th data-field="acc_password">账号密码</th>
+                <th data-field="owner" >拥有者</th>
+                <th data-field="server_name">所属大区</th>
+                <th data-field="id">操作</th>
+            </tr>
+            </thead>
+        </table>
+      </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+{#    <script type="text/javascript">#}
+{#        var $table = $("#table");#}
+{#        pageWidgets.registerCheckTableRow($table);#}
+{#        var table = bsTable.getTableModule($table, function () {})#}
+{#    </script>#}
+{% endblock %}
