@@ -15,4 +15,4 @@ class AccountSerializer(serializers.ModelSerializer):
 class ServerSerrializer(serializers.ModelSerializer):
     class Meta:
         model = acc_models.Server
-        field = ('name')
+        fields = '__all__'
