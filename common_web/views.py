@@ -9,7 +9,6 @@ from rest_framework import response
 from rest_framework.decorators import api_view
 
 # Create your views here.
-@login_required(login_url='/login/')
 def index(request):
     context = {
         'title': 'Hello Django',

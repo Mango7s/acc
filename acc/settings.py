@@ -136,3 +136,9 @@ STATICFILES_DIRS = [
 
 
 AUTH_USER_MODEL = 'common_auth.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
