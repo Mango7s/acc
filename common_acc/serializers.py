@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from common_acc import models as acc_models
 
+
 class AccountSerializer(serializers.ModelSerializer):
     server_name = serializers.SerializerMethodField()
 
@@ -11,6 +12,7 @@ class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = acc_models.Account
         fields = ('nikename','acc_number','acc_password','owner','server','server_name')
+
 
 class ServerSerrializer(serializers.ModelSerializer):
     class Meta:

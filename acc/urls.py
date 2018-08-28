@@ -18,7 +18,7 @@ from django.contrib import admin
 from common_web import urls
 from common_acc import urls
 urlpatterns = [
-    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^admin/', admin.site.urls),
     url(r'', include('common_web.urls')),
-    url(r'',include('common_acc.urls')),
+    url(r'^common_acc/',include('common_acc.urls')),
 ]

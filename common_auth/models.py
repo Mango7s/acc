@@ -16,12 +16,11 @@ class Team(models.Model):
         return self.name
 
 
-
 class User(AbstractUser):
     nikename = models.CharField('昵称', max_length=64, null=True, default=None)
     mobile = models.CharField('手机号', max_length=16, null=True, default=None)
     logo = models.ImageField(upload_to='user_logo', null=True, default=None)
-    introduction = models.TextField('简介',null=True)
+    introduction = models.TextField('简介', null=True)
     team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, default=None)
 
     def __unicode__(self):

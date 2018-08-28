@@ -43,3 +43,7 @@ def account_list(request):
 def logout(request):
     auth.logout(request)
     return redirect(reverse('index'))
+
+
+def switch_admin(request):
+    return render(request, 'testadmin.html')
